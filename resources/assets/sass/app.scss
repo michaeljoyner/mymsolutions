@@ -1,0 +1,16 @@
+@import "variables/colours";
+@import "variables/typography";
+@import "mixins/media";
+@import "partials/base.scss";
+@import "partials/header";
+@import "partials/homenav";
+@import "partials/footer";
+@import "partials/briefsform";
+@import "partials/fileuploadprogess";
+@import "partials/bootstrap";
+@import "partials/contactform";
+@import "partials/framecontainer";
+
+@import "pages/home";
+@import "pages/getstarted";
+@import "pages/thanks";

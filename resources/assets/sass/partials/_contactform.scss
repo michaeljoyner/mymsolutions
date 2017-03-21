@@ -1,0 +1,83 @@
+.contactform-inner-box {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.contactform-inner-box.expose {
+  height: 400px;
+  @include respond-to(phone) {height: 460px;}
+  @include respond-to(supersmalltablet) {height: 460px;}
+  @include respond-to(smalltablet) {height: 460px;}
+  @include respond-to(largetablet) {height: 460px;}
+
+}
+
+.gratitude-banner {
+  position: absolute;
+  height: 10em;
+  width: 800px;
+  max-width: 100%;
+  padding-top: 4em;
+  transform: translate3d(-1000px,0,0);
+  transition: 1s ease;
+  background: $primary_front;
+  top: 6em;
+
+  p {
+    color: $white;
+  }
+}
+
+.gratitude-banner.show {
+  transform: translate3d(0,0,0);
+}
+
+#contact-form {
+  transition: opacity .5s;
+  label {
+    color: $primary_front;
+    font-family: $main_sans;
+  }
+
+  input[type=text], input[type=email], textarea {
+    border: 1px solid $primary_front;
+    border-radius: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+#contact-form.fade {
+  opacity: 0;
+}
+
+#cf-send-btn {
+  text-align: center;
+  border: 2px solid #3EB7Ae;
+  padding: 0.5em;
+  color: #3EB7AE;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include respond-to(phone) {max-width: 300px; margin: 0 auto;}
+  @include respond-to(supersmalltablet) {max-width: 300px; margin: 0 auto;}
+  @include respond-to(smalltablet) {max-width: 300px; margin: 0 auto;}
+  @include respond-to(largetablet) {max-width: 300px; margin: 0 auto;}
+}
+
+#show-cf-btn {
+  cursor: pointer;
+
+  &:hover {
+    color: $pasty_red;
+  }
+}
+
+#fa-send-icon {
+  padding-right: 1em;
+}

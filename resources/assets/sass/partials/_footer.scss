@@ -1,0 +1,53 @@
+.site-footer {
+  background: $primary_dark;
+  height: 200px;
+  padding-top: 50px;
+
+  @include respond-to(phone) {padding-top: 20px;}
+  @include respond-to(supersmalltablet) {padding-top: 20px;}
+
+
+  p {
+    padding-top: 40px;
+    text-align: center;
+    color: $primary_front;
+
+    @include respond-to(phone) {padding-top: 20px;}
+    @include respond-to(supersmalltablet) {padding-top: 20px;}
+
+  }
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 28%;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+
+    @include respond-to(phone) {display: block; width:100%; padding-bottom: 0.5em;}
+    @include respond-to(supersmalltablet) {display: block; width:100%; padding-bottom: 0.5em;}
+
+
+    i {
+      display: block;
+      padding-bottom: 10px;
+      @include respond-to(phone) {display: none;}
+      @include respond-to(supersmalltablet) {display: none;}
+    }
+  }
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-nav li:hover {
+  color: $primary_front
+}

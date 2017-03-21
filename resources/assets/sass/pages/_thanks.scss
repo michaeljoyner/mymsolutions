@@ -1,0 +1,17 @@
+#thank-banner {
+  margin: 5em auto;
+  background: $primary_front;
+  padding: 8em 0;
+  max-width: 1000px;
+
+  p {
+    font-family: $main_serif;
+    font-size: 140%;
+    color: $white;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 4em;
+  }
+}

@@ -1,0 +1,20 @@
+.get-started-intro {
+  padding: 3em 1em;
+}
+
+.get-started-outro {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.get-started-outro p a {
+  color: $pasty_red;
+  text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline;
+
+  &:hover {
+    color: darken($pasty_red, 20%);
+  }
+}

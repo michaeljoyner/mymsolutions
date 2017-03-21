@@ -1,0 +1,186 @@
+#briefform {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+
+  input[type="text"], input[type="email"] {
+    border-radius: 0;
+    border: 1px solid $primary_front;
+  }
+
+  label {
+    color: $primary_front;
+    font-family: $main_sans;
+  }
+
+  h1, h2 {
+    text-align: center;
+    font-family: $main_sans;
+    color: $primary_dark;
+    margin: 1.5em 0;
+  }
+
+  .form-group {
+    margin-top: 1.5em;
+  }
+
+
+  .question {
+    font-family: $main_sans;
+    color: $primary_front;
+    font-size: 110%;
+    font-weight: 700;
+  }
+
+  .file-select-area {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .file-browse-btn {
+    display: inline-block;
+    height: 1.5em;
+    line-height: 1.35em;
+    border-radius: 1em;
+    font-size: 100%;
+    border: 1px solid #F2842E;
+    background-color: #FFF;
+    color: #F2842E;
+    font-weight: 400;
+    padding: 0 2em;
+    vertical-align: sub;
+    margin-left: 2em;
+  }
+
+  .options-list {
+    list-style-type: none;
+  }
+}
+
+.no-xhr2 #briefform .file-browse-btn {
+  display: none;
+}
+
+
+#briefform textarea {
+  height: 7em;
+  resize: none;
+  border-radius: 0;
+  border: 1px solid $primary_front;
+}
+
+#logo, #branding, #web, #general, #submit-field {
+  display: none;
+}
+
+.xhr2 #briefform input[type=file] {
+  display: none;
+}
+
+.control-panel {
+  margin-bottom: 2em;
+
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    @include respond-to(phone) {text-align: center;}
+    @include respond-to(supersmalltablet) {text-align: center;}
+    @include respond-to(smalltablet) {text-align: center;}
+  }
+}
+
+.control-panel label {
+  font-size: xx-large;
+  font-weight: 200;
+  @include respond-to(phone) {font-size: x-large;}
+  @include respond-to(widephone) {font-size: x-large;}
+}
+
+#briefform {
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:-20px; top: 5px;
+    width: 32px; height: 32px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: "\25CF";
+    position: absolute;
+    top: -4px; left: -13px;
+    font-size: 32px;
+    color: $primary_front;
+    transition: all .4s;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted $primary_front;
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border: 1px solid $primary_front!important;
+  }
+
+}
+
+#submit-field {
+  text-align: center;
+
+  .btn {
+    width: 200px;
+    border-radius: 0;
+    background: $primary_dark;
+    color: $primary_front;
+    font-family: $main_sans;
+    text-transform: uppercase;
+  }
+
+  .btn:hover {
+    color: $white;
+  }
+}
