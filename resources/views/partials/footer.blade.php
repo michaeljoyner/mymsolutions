@@ -8,13 +8,7 @@
                 <a href="{{ url('/') }}">home</a>
             @endif
             </li>
-            <li><i class="fa fa-play fa-2x"></i>
-            @if(Request::path() === 'getstarted')
-                <a href="#">back to top</a>
-            @else
-                <a href="{{ url('/getstarted') }}">get started</a>
-            @endif
-            </li>
+
             <li><i class="fa fa-envelope fa-2x"></i>
             @if(Request::path() === 'home' || Request::path() === '/')
                 <a href="#contact">contact us</a>
