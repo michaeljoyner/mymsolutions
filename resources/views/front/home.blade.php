@@ -5,12 +5,8 @@
 @section('content')
     @include('partials.logoheader')
     @include('partials.pagenav')
-    <section>
-        <article class="bannerText">
-            <p>superior</p>
-            <p>branding</p>
-            <p>solutions</p>
-        </article>
+    <section class="lead-video">
+        <video src="/video/MYM_Solutions2.mp4" controls></video>
     </section>
     <section id="about" class="about-section">
         <h2>ABOUT</h2>

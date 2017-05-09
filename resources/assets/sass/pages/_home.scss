@@ -138,3 +138,13 @@
   }
 }
 
+.lead-video {
+  padding: 5px 0;
+  background: $primary_dark;
+  video {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+

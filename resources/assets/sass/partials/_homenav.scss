@@ -3,11 +3,18 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  display: flex;
+
+  @include respond-to(phone) {
+    flex-direction: column;
+  }
 }
 
 .menu {
   width: 33%;
-  float: left;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
   display: inline-block;
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -22,8 +29,6 @@
   border-bottom: 2px solid $primary_dark;
   @include respond-to(phone) {
     width: 100%;
-    float: none;
-    display: block;
     &:not(:last-child) {
       border-bottom: 0;
     }
