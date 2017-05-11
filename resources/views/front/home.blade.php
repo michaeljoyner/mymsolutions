@@ -6,7 +6,7 @@
     @include('partials.logoheader')
     @include('partials.pagenav')
     <section class="lead-video">
-        <video id="video" src="/video/MYM_Solutions2.mp4" poster="/images/video/video_image.jpg" controls></video>
+        <video id="video" src="/video/MYM_Solutions2.mp4" poster="/images/video/video_image.jpg" controls playsinline></video>
         @include('front.svgicons.play_button')
         @include('front.svgicons.pause_button')
     </section>
