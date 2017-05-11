@@ -1,5 +1,5 @@
 <div class=""contactform-outer-box>
-    <p id="show-cf-btn">Click to send us a message</p>
+    <p id="show-cf-btn">Send message</p>
     <p id="cf-note"></p>
     <p id="cf-errors" class="text-danger"></p>
     <div id="contactform-inner-box" class="contactform-inner-box">

@@ -1,18 +1,21 @@
-.bannerText {
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
   background: $primary_dark;
-  padding: 1em 0;
-  clear: both;
-  p {
-    font-family: $medium_sans;
-    font-size: 6.5em;
-    padding: 0;
-    margin: 0 0 0 12px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    color: $primary_front;
-    @include respond-to(phone) {font-size: 3em;}
-    @include respond-to(supersmalltablet) {font-size: 4em;}
-    @include respond-to(smalltablet) {font-size: 5em;}
+
+  img {
+    height: 100px;
+  }
+}
+
+.hp-section {
+  padding: 40px 1em;
+
+  .section-title {
+    margin-bottom: 40px;
   }
 }
 
@@ -25,13 +28,12 @@
 
 .about-section {
   font-size: 120%;
-  padding: 1em 1em 2em 1em;
   p {
     max-width: 800px;
     margin: 1em auto;
     text-align: center;
-    font-size: 130%;
-    line-height: 1.4;
+    font-size: 110%;
+    line-height: 1.5;
     font-family: $main_serif;
     font-weight: 300;
     @include respond-to(phone) {font-size: 115%;}
@@ -41,7 +43,6 @@
 
 .service-section {
   background: $primary_front;
-  padding: 1em 0 2em 0;
   &>h2 {
     color: $primary_dark;
     text-align: center;
@@ -53,8 +54,8 @@
     max-width: 700px;
     margin: 1em auto;
     text-align: center;
-    font-size: 120%;
-    line-height: 1.4;
+    font-size: 100%;
+    line-height: 1.5;
     font-family: $main_serif;
     font-weight: 300;
     color: $white;
@@ -64,65 +65,39 @@
 .service-box-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-}
+  display: flex;
+  padding-bottom: 40px;
 
-.service-box {
-  width: 33.33%;
-  float: left;
-  padding: 0 1.5em;
-  text-align: center;
-  font-size: 120%;
-
-  h3 {
-    font-family: $main_sans;
+  @include respond-to(phone) {
+    flex-direction: column;
   }
 
-  p {
-    font-family: $main_serif;
-    color: $white;
-  }
-  @include respond-to(phone) {width: 100%; display: block; float: none; margin-bottom: 3em;}
-  @include respond-to(supersmalltablet) {width: 100%; display: block; float: none; margin-bottom: 3em;}
-  @include respond-to(smalltablet) {width: 100%; display: block; float: none; margin-bottom: 3em;}
-  @include respond-to(mediumtablet) {width: 100%; display: block; float: none; margin-bottom: 3em;}
-  @include respond-to(largetablet) {width: 100%; display: block; float: none; margin-bottom: 3em;}
-}
-
-.service-prompt {
-  font-family: $main_serif;
-  color: $white;
-  text-align: center;
-  font-size: 120%;
-  clear: both;
-  padding: 2em 0;
-}
-
-.start-prompt {
-  width: 100%;
-  text-align: center;
-
-  a, a:visited, a:link {
-    display: inline-block;
-    width: 9em;
-    margin: 0 2em;
+  .service-box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 33%;
+    padding: 0 1.5em;
     text-align: center;
-    font-family: $main_sans;
-    font-weight: 700;
-    color: $white;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    background-color: $primary_dark;
-    text-decoration: none;
-    padding: 8px;
-  }
+    font-size: 120%;
 
-  a:hover, a:active {
-    color: $primary_front;
+    @include respond-to(phone) {
+      width: 100%;
+    }
+
+    h3 {
+      font-family: $main_sans;
+    }
+
+    p {
+      font-family: $main_serif;
+      color: $white;
+    }
   }
 }
+
 
 .contact-section {
-  padding: 2em 1em;
   &>h2 {
     font-size: 35px;
     color: $primary_front;
@@ -136,15 +111,66 @@
     line-height: 1.4;
     text-align: center;
   }
+
+  #show-cf-btn {
+    width: 14em;
+    border: 3px solid;
+    color: $primary_front;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2em auto;
+    font-family: $main_sans;
+    padding: 6px 0;
+    font-size: 1.3em;
+
+    &:hover {
+      background: $primary_front;
+      color: $white;
+      border-color: $primary_front;
+    }
+  }
 }
 
 .lead-video {
   padding: 5px 0;
   background: $primary_dark;
+  position: relative;
+
   video {
     width: 100%;
     margin: 0 auto;
     display: block;
   }
+
+  svg {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .5;
+  }
+
+  &.can-control.playing {
+    #play_btn {
+      display: none;
+    }
+  }
+
+  &.can-control.paused {
+    #play_btn {
+      display: block;
+    }
+  }
+
+  &.can-control.playing:hover {
+    #pause_btn {
+      display: block;
+    }
+  }
+
+
+
+
 }
 

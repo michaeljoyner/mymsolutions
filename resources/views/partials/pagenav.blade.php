@@ -1,7 +1,5 @@
 <nav class="page-nav">
-    <ul class="page-nav-list">
-        <li class="fluid menu"><a href="/#about">ABOUT</a></li>
-        <li class="fluid menu"><a href="/#services">SERVICES</a></li>
-        <li class="fluid menu"><a href="/#contact">CONTACT</a></li>
-    </ul>
+    <a href="/#about">ABOUT</a>
+    <a href="/#services">SERVICES</a>
+    <a href="/#contact">CONTACT</a>
 </nav>

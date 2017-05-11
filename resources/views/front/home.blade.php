@@ -6,16 +6,18 @@
     @include('partials.logoheader')
     @include('partials.pagenav')
     <section class="lead-video">
-        <video src="/video/MYM_Solutions2.mp4" controls></video>
+        <video id="video" src="/video/MYM_Solutions2.mp4" poster="/images/video/video_image.jpg" controls></video>
+        @include('front.svgicons.play_button')
+        @include('front.svgicons.pause_button')
     </section>
-    <section id="about" class="about-section">
-        <h2>ABOUT</h2>
+    <section id="about" class="about-section hp-section">
+        <h2 class="section-title">ABOUT</h2>
         <p>You already know this but we'll say it anyway - to be taken seriously in your industry you need to look the part.You've got the ideas and you've got the talent, now all you need is an awesome identity to make your presence truly felt. Agreed? Cool, then keep reading.</p>
         <p>Make Your Mark (that's us) wants to take your new or existing brand and make it look remarkable. We want to give it the personality it deserves, while maintaining stature and functionality. That's not always an easy balance to achieve, but don't worry, that's what we are here for.</p>
         <p>We specialise in logo design, corporate branding and web design and development.</p>
     </section>
-    <section id="services" class="service-section">
-        <h2>SERVICES</h2>
+    <section id="services" class="service-section hp-section">
+        <h2 class="section-title">SERVICES</h2>
         <div class="service-box-wrapper">
             <div class="service-box">
                 <h3><i class="fa fa-paint-brush"></i></h3>
@@ -33,11 +35,11 @@
                 <p>Need to connect? Then don't kid yourself, you need a website. No brand is complete without a web presence, and you will only benefit from this. From a simple landing page with your contact details to a multi-faceted, outright work horse, we can create the website you need to showcase your company's products, services and talent, making it easier for people to find you, and for you to stand out.</p>
             </div>
         </div>
-        <p class="service-prompt">Ready to get started? Hit the button and complete our brief.</p>
-        <div class="start-prompt"> <a href="getstarted">GET STARTED</a> </div>
+        {{--<p class="service-prompt">Ready to get started? Hit the button and complete our brief.</p>--}}
+        {{--<div class="start-prompt"> <a href="getstarted">GET STARTED</a> </div>--}}
     </section>
-    <section id="contact" class="contact-section">
-        <h2>CONTACT</h2>
+    <section id="contact" class="contact-section hp-section">
+        <h2 class="section-title">CONTACT</h2>
         @include('partials.contactform')
         <p>-or-</p>
         <p>Feel free to call, text or email with any questions and enquiries <br>
@@ -53,5 +55,46 @@
     <script src="{{ asset('js/contactform.min.js') }}"></script>
     <script>
         myContactForm.init();
+
+        var videoManager = {
+
+            elems: {
+                video: document.querySelector('#video'),
+                container: document.querySelector('.lead-video'),
+                play: document.querySelector('#play_btn'),
+                pause: document.querySelector('#pause_btn')
+            },
+
+            init: function() {
+                videoManager.elems.container.classList.add('can-control');
+
+                videoManager.elems.container.addEventListener('click', videoManager.togglePlay, false);
+
+                videoManager.elems.video.addEventListener('play', videoManager.handlePlay, false);
+                videoManager.elems.video.addEventListener('pause', videoManager.handlePause, false);
+            },
+
+            togglePlay: function() {
+                var video = videoManager.elems.video;
+                if(video.paused) {
+                    return video.play();
+                }
+                video.pause();
+            },
+
+            handlePlay() {
+                var container = videoManager.elems.container;
+                container.classList.remove('paused');
+                container.classList.add('playing');
+            },
+
+            handlePause() {
+                var container = videoManager.elems.container;
+                container.classList.remove('playing');
+                container.classList.add('paused');
+            }
+        }
+
+        videoManager.init();
     </script>
 @stop

@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Gotham';
-  src: url('../../fonts/gotham_book.otf');
+  src: url('/fonts/gotham_book.otf');
 }
 
 @font-face {
   font-family: 'Gotham Medium';
-  src: url('../../fonts/gotham_medium.otf');
+  src: url('/fonts/gotham_medium.otf');
 }
 
-$main_sans: 'Gotham', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$main_sans: 'Gotham Medium', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $medium_sans: 'Gotham Medium', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$main_serif: 'Merriweather', serif;
+$main_serif: 'Gotham', serif;
