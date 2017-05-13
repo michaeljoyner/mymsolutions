@@ -14,7 +14,6 @@
     <link href="{{ mix("css/app.css") }}" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,6 +36,7 @@
 <body>
 @yield('content')
 
+<script src="{{ mix('js/app.js') }}"></script>
 @section('bodyscripts')
 @show
 </body>

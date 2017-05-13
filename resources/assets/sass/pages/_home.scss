@@ -166,6 +166,18 @@
   &.can-control.playing:hover {
     #pause_btn {
       display: block;
+
+      @include respond-to(phone) {
+        display: none;
+      }
+
+      @include respond-to(smalltablet) {
+        display: none;
+      }
+
+      @include respond-to(largetablet) {
+        display: none;
+      }
     }
   }
 
