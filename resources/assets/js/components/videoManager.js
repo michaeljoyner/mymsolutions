@@ -25,6 +25,7 @@ export default {
         var container = this.elems.container;
         container.classList.remove('paused');
         container.classList.add('playing');
+        setTimeout(() => container.classList.remove('playing'), 2000);
     },
 
     handlePause() {
