@@ -27,6 +27,7 @@
     <meta property="og:url" content="http://mymsolutions.co.za"/>
     <meta property="og:title" content="Make Your Mark"/>
     <meta property="og:image" content="{{ asset('images/fb_pic.png') }}"/>
+    <meta name="google-site-verification" content="53ROrGsry0DSN7ncltv7V9gWrLXjHpbiBYRLPtFPdYw" />
     @section('fb_description')
     @show
 
