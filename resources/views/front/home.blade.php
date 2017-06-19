@@ -46,7 +46,7 @@
             <br>
             <strong>Ryan Kiepiel</strong> <br>
             +27 83 257 9611 <br>
-            &#114;y&#97;&#110;&#64;mym&#115;oluti&#111;&#110;s&#46;c&#111;&#46;&#122;&#97;</p>
+            sales@mymsolutions.co.za</p>
     </section>
     @include('partials.footer')
 @stop

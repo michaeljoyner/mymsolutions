@@ -12,6 +12,6 @@ class ContactController extends Controller
     {
         $this->validate(request(), ['email' => 'required', 'message' => 'required']);
 
-        Mail::to('ryan@absolutesport.co.za')->send(new ContactMessage(request()->only('name', 'email', 'message')));
+        Mail::to('sales@mymsolutions.co.za')->send(new ContactMessage(request()->only('name', 'email', 'message')));
     }
 }
